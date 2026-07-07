@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: replace https://example.netlify.app with your real domain, then update <lastmod> when you change pages. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.netlify.app/</loc>
+    <loc>https://amirtechlab.dev/</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://example.netlify.app/projects/robot-tour-v2.html</loc>
+    <loc>https://amirtechlab.dev/projects/robot-tour-v2.html</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.netlify.app/projects/electric-vehicle-v2.html</loc>
+    <loc>https://amirtechlab.dev/projects/electric-vehicle-v2.html</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.netlify.app/projects/robot-tour-v1.html</loc>
+    <loc>https://amirtechlab.dev/projects/robot-tour-v1.html</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.netlify.app/projects/electric-vehicle-v1.html</loc>
+    <loc>https://amirtechlab.dev/projects/electric-vehicle-v1.html</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

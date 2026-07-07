@@ -7,13 +7,12 @@
   <title>Amir Pourmohammadi · Amir Tech Lab — Engineering & Builds</title>
   <meta name="description" content="Amir Pourmohammadi (Amir Tech Lab) builds practical devices and prototypes — Arduino robots, electric vehicles, 3D-printed parts, and electronics projects, taken from sketchbook to working hardware." />
 
-  <!-- Open Graph / sharing (replace og-image.jpg with your own 1200x630 image) -->
+  <!-- Open Graph / sharing -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Amir Pourmohammadi · Amir Tech Lab" />
   <meta property="og:description" content="Practical devices and prototypes: Arduino robots, electric vehicles, and 3D-printed builds — documented from prototype to result." />
-  <meta property="og:image" content="images/og-image.jpg" />
-  <!-- TODO: set this to your live URL once deployed, e.g. https://amir-techlab.netlify.app/ -->
-  <meta property="og:url" content="https://example.netlify.app/" />
+  <meta property="og:image" content="https://amirtechlab.dev/images/hero-workshop.jpg" />
+  <meta property="og:url" content="https://amirtechlab.dev/" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Favicon (swap favicon.svg / add favicon.ico anytime) -->
@@ -124,7 +123,6 @@
             </a>
             <div class="card__body">
               <h3 class="card__title">Robot Tour v2</h3>
-              <!-- TODO: replace with your own one-sentence problem statement -->
               <p class="card__problem">Build on Robot Tour v1 by adding a front guide structure to reach and align with targets more reliably.</p>
               <p class="card__desc">An Arduino-driven maze robot rebuilt with a wider 3D-printed front guide and reworked wiring. Demo clip included.</p>
               <p class="card__specs">ARDUINO&nbsp;UNO · 2×DC&nbsp;GEAR&nbsp;MOTORS · FRONT&nbsp;GUIDE · 3D-PRINTED&nbsp;CHASSIS</p>
@@ -147,7 +145,6 @@
             </a>
             <div class="card__body">
               <h3 class="card__title">Electric Vehicle v2</h3>
-              <!-- TODO: replace with your own one-sentence problem statement -->
               <p class="card__problem">Make a smaller, tidier electric vehicle platform than v1 with a self-contained 3D-printed body.</p>
               <p class="card__desc">A compact two-wheel-drive vehicle on a custom printed chassis, wired around an Arduino Uno and a breadboard.</p>
               <p class="card__specs">ARDUINO&nbsp;UNO · 2×DC&nbsp;GEAR&nbsp;MOTORS · BREADBOARD · 3D-PRINTED&nbsp;BODY</p>
@@ -170,7 +167,6 @@
             </a>
             <div class="card__body">
               <h3 class="card__title">Robot Tour v1</h3>
-              <!-- TODO: replace with your own one-sentence problem statement -->
               <p class="card__problem">Create a first maze-navigating robot that can drive a planned route and turn accurately.</p>
               <p class="card__desc">The original build on a stacked black chassis, using a GY-521 motion sensor for heading and turn control.</p>
               <p class="card__specs">ARDUINO&nbsp;UNO · GY-521&nbsp;IMU · 2×DC&nbsp;GEAR&nbsp;MOTORS · STACKED&nbsp;CHASSIS</p>
@@ -197,7 +193,6 @@
             </a>
             <div class="card__body">
               <h3 class="card__title">Electric Vehicle v1</h3>
-              <!-- TODO: replace with your own one-sentence problem statement -->
               <p class="card__problem">Get a first driving electric vehicle working end-to-end, from motors to control.</p>
               <p class="card__desc">The first running prototype, documented with a short demo clip. Photos to be added.</p>
               <p class="card__specs">ARDUINO · DC&nbsp;GEAR&nbsp;MOTORS · DEMO&nbsp;VIDEO</p>
@@ -241,7 +236,6 @@
           <div class="about__stat"><span>Builds documented</span><strong>4</strong></div>
           <div class="about__stat"><span>Versions iterated</span><strong>v1 → v2</strong></div>
           <div class="about__stat"><span>Core toolkit</span><strong>Arduino · 3D print</strong></div>
-          <!-- TODO: edit these to whatever numbers you want to highlight -->
           <p class="mt-2" style="margin-bottom:0;font-size:.92rem;color:var(--c-olive)">Watch build videos on <a href="https://www.youtube.com/@amirduino" target="_blank" rel="noopener">YouTube&nbsp;@amirduino</a>.</p>
         </aside>
       </div>
@@ -275,7 +269,6 @@
               <li>Reading sensor data &amp; driving motors</li>
               <li>Debugging with the serial monitor</li>
               <li>Simple control logic &amp; timing</li>
-              <!-- TODO: add other languages/tools you use -->
             </ul>
           </div>
 
@@ -286,7 +279,6 @@
               <li>3D printing chassis &amp; mounts</li>
               <li>Designing for fit, tolerance &amp; assembly</li>
               <li>Iterating printed parts between versions</li>
-              <!-- TODO: name your CAD software, e.g. Fusion 360 / Tinkercad / Onshape -->
             </ul>
           </div>
 
@@ -335,23 +327,22 @@
 
         <div class="reveal">
           <!--
-            Netlify contact form.
-            - data-netlify="true" lets Netlify auto-detect it on deploy.
-            - netlify-honeypot names the hidden anti-spam field ("bot-field").
-            - action="/thank-you.html" is the no-JS fallback success page.
-            - script.js enhances it with inline loading / success / error states.
+            Contact form powered by Formspree — works on GitHub Pages (no backend needed).
+            Connected to form endpoint mnjkyqyg (notifications go to amirpourmohammadi.tech@gmail.com).
+            script.js adds inline loading / success / error states; without JS the form still
+            submits and Formspree redirects to /thank-you.html (via the _next field).
           -->
           <form name="contact" method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-                action="/thank-you.html"
+                action="https://formspree.io/f/mnjkyqyg"
                 class="form" id="contactForm" novalidate>
-            <!-- Required hidden input so Netlify maps the submission to this form -->
-            <input type="hidden" name="form-name" value="contact" />
+            <!-- Where Formspree sends visitors after a no-JS submit -->
+            <input type="hidden" name="_next" value="https://amirtechlab.dev/thank-you.html" />
+            <!-- Subject line shown in the email Formspree sends you -->
+            <input type="hidden" name="_subject" value="New message from amirtechlab.dev" />
 
-            <!-- Honeypot: real people never see or fill this -->
+            <!-- Honeypot: real people never see or fill this; Formspree drops any submission that does -->
             <p class="hp" aria-hidden="true">
-              <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+              <label>Don't fill this out if you're human: <input name="_gotcha" tabindex="-1" autocomplete="off" /></label>
             </p>
 
             <div class="field">

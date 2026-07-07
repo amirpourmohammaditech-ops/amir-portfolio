@@ -88,7 +88,9 @@
   }
 
   /* ---------- Contact form: inline loading / success / error states ----------
-     Falls back to a normal POST to /thank-you.html if fetch/JS is unavailable. */
+     Submits to the Formspree endpoint set in the form's action="" attribute.
+     Without JS, the form still submits normally and Formspree redirects to
+     /thank-you.html via the hidden _next field. */
   var form = document.getElementById("contactForm");
   if (form && window.fetch) {
     var statusEl = document.getElementById("formStatus");
@@ -99,12 +101,6 @@
       statusEl.textContent = msg || "";
       statusEl.classList.remove("is-error", "is-ok");
       if (kind) statusEl.classList.add(kind);
-    };
-
-    var encode = function (data) {
-      return Object.keys(data).map(function (k) {
-        return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-      }).join("&");
     };
 
     form.addEventListener("submit", function (e) {
@@ -118,23 +114,22 @@
 
       e.preventDefault();
 
-      var data = {};
-      new FormData(form).forEach(function (value, key) { data[key] = value; });
-
       submitBtn.setAttribute("aria-busy", "true");
       var original = submitBtn.textContent;
       submitBtn.textContent = "Sending…";
       setStatus("Sending your message…");
 
-      fetch("/", {
+      // Post straight to Formspree (its URL lives in the form's action="").
+      // Accept: application/json makes Formspree reply with JSON instead of a redirect.
+      fetch(form.action, {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode(data)
+        headers: { "Accept": "application/json" },
+        body: new FormData(form)
       })
         .then(function (res) {
           if (!res.ok) throw new Error("Network response was not ok");
-          // Success — go to the thank-you page (matches the no-JS path)
           setStatus("Message sent. Redirecting…", "is-ok");
+          form.reset();
           window.location.href = "/thank-you.html";
         })
         .catch(function () {
