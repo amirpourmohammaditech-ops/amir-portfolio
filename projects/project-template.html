@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--
+  PROJECT TEMPLATE — copy this file to make a new project page.
+  1. Copy projects/project-template.html to projects/your-project-name.html
+  2. Replace every TODO and the [SQUARE BRACKET] placeholders below.
+  3. Add a matching card on index.html (in the .projects__grid) that links here.
+  4. Put photos in images/ and videos in videos/ using clear filenames.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[PROJECT TITLE] · Amir Tech Lab</title>
+  <meta name="description" content="[One-sentence description of this project for search results.]" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="[PROJECT TITLE] · Amir Tech Lab" />
+  <meta property="og:description" content="[One-sentence description.]" />
+  <meta property="og:image" content="../images/[your-project]-final.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../favicon.ico" sizes="any" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Amir Pourmohammadi — Amir Tech Lab, home">
+        <span class="brand__name">Amir Pourmohammadi</span>
+        <span class="brand__tag">Amir Tech Lab</span>
+      </a>
+      <nav aria-label="Primary">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+          <span class="nav__toggle-bars" aria-hidden="true"></span>
+        </button>
+        <ul class="nav__links" id="navLinks">
+          <li><a class="nav__link" href="../index.html">Home</a></li>
+          <li><a class="nav__link" href="../index.html#projects">Projects</a></li>
+          <li><a class="nav__link" href="../index.html#about">About</a></li>
+          <li><a class="nav__link" href="../index.html#skills">Skills</a></li>
+          <li><a class="nav__link" href="../index.html#contact">Contact</a></li>
+          <li><a class="btn btn--accent btn--small nav__cta" href="../index.html#contact">Get in touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="proj-hero grid-paper">
+      <div class="container">
+        <a class="back-link" href="../index.html#projects">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H4M7.5 4l-4 4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          All projects
+        </a>
+        <div class="proj-hero__meta">
+          <span class="card__badge" style="position:static">[v1]</span>
+          <div class="tags" style="margin:0">
+            <span class="tag">[Tag]</span><span class="tag">[Tag]</span>
+          </div>
+        </div>
+        <h1>[PROJECT TITLE]</h1>
+        <p class="proj-hero__summary">[One-sentence summary of the project.]</p>
+      </div>
+    </section>
+
+    <div class="container proj-layout">
+      <nav class="proj-toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#problem">The problem</a></li>
+          <li><a href="#why">Why I built it</a></li>
+          <li><a href="#tools">Tools &amp; materials</a></li>
+          <li><a href="#prototype">Prototype photos</a></li>
+          <li><a href="#cad">CAD &amp; diagrams</a></li>
+          <li><a href="#testing">Testing</a></li>
+          <li><a href="#challenges">Challenges</a></li>
+          <li><a href="#changed">What I changed</a></li>
+          <li><a href="#result">Final result</a></li>
+          <li><a href="#next">What I'd improve</a></li>
+          <li><a href="#video">Demo video</a></li>
+        </ol>
+      </nav>
+
+      <div class="proj-content">
+        <figure class="hero__plate" style="margin:0 0 2.5rem">
+          <img src="../images/[your-project]-final.jpg" alt="[Describe the main project photo.]" />
+          <figcaption class="hero__plate-tag">[PROJECT TITLE] · final build</figcaption>
+        </figure>
+
+        <section class="proj-block" id="problem" aria-labelledby="problem-h">
+          <h2 id="problem-h"><span class="n">01</span> The problem</h2>
+          <p><!-- TODO -->[What problem did this build set out to solve?]</p>
+        </section>
+
+        <section class="proj-block" id="why" aria-labelledby="why-h">
+          <h2 id="why-h"><span class="n">02</span> Why I built it</h2>
+          <p><!-- TODO -->[Why did you decide to build this?]</p>
+        </section>
+
+        <section class="proj-block" id="tools" aria-labelledby="tools-h">
+          <h2 id="tools-h"><span class="n">03</span> Tools, materials &amp; software</h2>
+          <table class="spec-table">
+            <tbody>
+              <tr><th>Microcontroller</th><td>[e.g. Arduino Uno]</td></tr>
+              <tr><th>Drive</th><td>[e.g. 2× DC gear motors]</td></tr>
+              <tr><th>Structure</th><td>[e.g. 3D-printed chassis]</td></tr>
+              <tr><th>Software</th><td>[e.g. Arduino sketch (C/C++)]</td></tr>
+              <!-- Add or remove rows as needed -->
+            </tbody>
+          </table>
+        </section>
+
+        <section class="proj-block" id="prototype" aria-labelledby="prototype-h">
+          <h2 id="prototype-h"><span class="n">04</span> Prototype photos</h2>
+          <p>[Intro line for the gallery. Tap any photo to view it larger.]</p>
+          <div class="gallery">
+            <figure>
+              <button class="shot" type="button" data-lightbox data-full="../images/[your-project]-1.jpg" data-caption="[Caption]">
+                <img src="../images/[your-project]-1.jpg" loading="lazy" alt="[Alt text.]" />
+              </button>
+              <figcaption>[Caption]</figcaption>
+            </figure>
+            <!-- Duplicate the <figure> above for each photo -->
+          </div>
+        </section>
+
+        <section class="proj-block" id="cad" aria-labelledby="cad-h">
+          <h2 id="cad-h"><span class="n">05</span> CAD &amp; diagrams</h2>
+          <div class="placeholder">
+            <span class="placeholder__title">CAD screenshot or wiring diagram</span>
+            <span>Save it as <code>images/[your-project]-cad.jpg</code> and swap this block for an &lt;img&gt;.</span>
+          </div>
+        </section>
+
+        <section class="proj-block" id="testing" aria-labelledby="testing-h">
+          <h2 id="testing-h"><span class="n">06</span> Testing process</h2>
+          <p><!-- TODO -->[How did you test it?]</p>
+        </section>
+
+        <section class="proj-block" id="challenges" aria-labelledby="challenges-h">
+          <h2 id="challenges-h"><span class="n">07</span> Challenges &amp; failures</h2>
+          <div class="note note--failure">
+            <span class="note__label">What didn't work</span>
+            <p style="margin:0"><!-- TODO -->[What went wrong, and what you learned.]</p>
+          </div>
+        </section>
+
+        <section class="proj-block" id="changed" aria-labelledby="changed-h">
+          <h2 id="changed-h"><span class="n">08</span> What I changed after testing</h2>
+          <div class="note note--revision">
+            <span class="note__label">Revision</span>
+            <p style="margin:0"><!-- TODO -->[What you revised based on testing.]</p>
+          </div>
+        </section>
+
+        <section class="proj-block" id="result" aria-labelledby="result-h">
+          <h2 id="result-h"><span class="n">09</span> Final result</h2>
+          <p><!-- TODO -->[How the finished build turned out.]</p>
+        </section>
+
+        <section class="proj-block" id="next" aria-labelledby="next-h">
+          <h2 id="next-h"><span class="n">10</span> What I'd improve next</h2>
+          <p><!-- TODO -->[What the next version would change.]</p>
+        </section>
+
+        <section class="proj-block" id="video" aria-labelledby="video-h">
+          <h2 id="video-h"><span class="n">11</span> Demo video</h2>
+          <!-- If you have a clip, use the <video> block. Otherwise keep the empty-state note. -->
+          <div class="video-block">
+            <video controls preload="metadata" poster="../images/[your-project]-demo-poster.jpg" playsinline>
+              <source src="../videos/[your-project]-demo.mp4" type="video/mp4" />
+              Your browser can't play embedded video.
+              <a href="../videos/[your-project]-demo.mp4">Download the demo clip</a> instead.
+            </video>
+            <div class="video-block__cap">
+              <p>[Short caption for the clip.]</p>
+              <a class="btn btn--ghost btn--small" href="https://www.youtube.com/@amirduino" target="_blank" rel="noopener">Watch full build on YouTube</a>
+            </div>
+          </div>
+        </section>
+
+        <p style="margin-top:2.5rem">
+          <a class="btn btn--ghost" href="../index.html#projects">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H4M7.5 4l-4 4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Back to all projects
+          </a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <a class="brand footer__brand" href="../index.html">
+          <span class="brand__name">Amir Pourmohammadi</span>
+          <span class="brand__tag">Amir Tech Lab</span>
+        </a>
+        <ul class="footer__links">
+          <li><a href="https://github.com/amirpourmohammaditech-ops/amir-portfolio" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.youtube.com/@amirduino" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <span>Built through iteration · v1 → v2 → next.</span>
+        <span>© <span id="year">2026</span> Amir Pourmohammadi · Amir Tech Lab</span>
+        <a class="to-top" href="#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
