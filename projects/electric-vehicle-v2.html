@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Electric Vehicle v2 · Amir Tech Lab</title>
-  <meta name="description" content="Electric Vehicle v2 — a compact Arduino-driven electric vehicle on a custom 3D-printed chassis. Build process and testing notes." />
+  <meta name="description" content="Electric Vehicle v2: a compact Arduino-driven electric vehicle on a custom 3D-printed chassis. Build process and testing notes." />
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Electric Vehicle v2 · Amir Tech Lab" />
-  <meta property="og:description" content="Electric Vehicle v2 — a compact Arduino-driven electric vehicle on a custom 3D-printed chassis. Build process and testing notes." />
+  <meta property="og:description" content="Electric Vehicle v2: a compact Arduino-driven electric vehicle on a custom 3D-printed chassis. Build process and testing notes." />
   <meta property="og:image" content="../images/electric-vehicle-v2-final.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -90,28 +90,25 @@
 
         <section class="proj-block" id="problem" aria-labelledby="problem-h">
           <h2 id="problem-h"><span class="n">01</span> The problem</h2>
-          <!-- TODO: describe, in your own words, the original problem this build set out to solve. -->
-          <p>v1 worked but was bulky and loosely assembled. v2 aimed for a smaller, tidier vehicle with a self-contained printed body. TODO — add your own description here.</p>
+          <p>The first version drove, but it was bulky and held together loosely, so parts moved around while it ran. For v2 I wanted a smaller vehicle with a real body that kept the electronics in fixed spots.</p>
         </section>
 
         <section class="proj-block" id="why" aria-labelledby="why-h">
           <h2 id="why-h"><span class="n">02</span> Why I built it</h2>
-          <!-- TODO: why did you decide to build this? What sparked it? -->
-          <p>TODO — add your own description here.</p>
+          <p>After the Science Olympiad vehicle build, I wanted to make a cleaner version on my own. The loose frame on v1 was the part that bothered me most. Designing the body in CAD also let me practice 3D printing, which I wanted to get better at.</p>
         </section>
 
         <section class="proj-block" id="tools" aria-labelledby="tools-h">
           <h2 id="tools-h"><span class="n">03</span> Tools, materials &amp; software</h2>
-          <!-- TODO: confirm each row and fill any "TODO — add detail" values. -->
           <table class="spec-table">
             <tbody>
               <tr><th>Microcontroller</th><td>Arduino Uno</td></tr>
               <tr><th>Drive</th><td>2× DC gear motors with yellow-hub wheels</td></tr>
               <tr><th>Structure</th><td>Custom 3D-printed box chassis</td></tr>
               <tr><th>Prototyping</th><td>Breadboard + jumper wires</td></tr>
-              <tr><th>Motor driver</th><td>TODO — add the driver board/IC you used</td></tr>
-              <tr><th>Power</th><td>TODO — add battery / power source</td></tr>
-              <tr><th>Software</th><td>Arduino sketch (C/C++) — TODO add detail</td></tr>
+              <tr><th>Motor driver</th><td>TB6612FNG dual motor driver</td></tr>
+              <tr><th>Power</th><td>8 AA batteries</td></tr>
+              <tr><th>Software</th><td>Arduino IDE (C++)</td></tr>
             </tbody>
           </table>
         </section>
@@ -137,47 +134,42 @@
 
         <section class="proj-block" id="cad" aria-labelledby="cad-h">
           <h2 id="cad-h"><span class="n">05</span> CAD &amp; diagrams</h2>
-          <!-- TODO: add CAD screenshots or wiring diagrams to images/ and place them here. -->
-          <div class="placeholder">
-            <span class="placeholder__title">CAD screenshot or wiring diagram</span>
-            <span>Save it as <code>images/electric-vehicle-v2-cad.jpg</code> and swap this block for an &lt;img&gt;.</span>
-          </div>
+          <p>I designed the chassis in CAD before printing it. It has a flat bed for the board and battery, bracket walls with holes to hold the axle, and a curved cutout on one end for the motor.</p>
+          <figure class="hero__plate" style="margin:1.5rem 0 0">
+            <img src="../images/electric-vehicle-v2-cad.jpg" alt="CAD model of the v2 chassis: a flat printed base with slotted bracket walls and a curved cutout on one end." />
+            <figcaption class="hero__plate-tag">v2 chassis, designed in CAD</figcaption>
+          </figure>
         </section>
 
         <section class="proj-block" id="testing" aria-labelledby="testing-h">
           <h2 id="testing-h"><span class="n">06</span> Testing process</h2>
-          <!-- TODO: how did you test it? What did you measure or watch for? -->
-          <p>TODO — add your own description here.</p>
+          <p>After the chassis was printed and the electronics were in, I ran the vehicle to check the fit and see how it drove. When a part did not line up or the code needed a tweak, I made small changes and tried again.</p>
         </section>
 
         <section class="proj-block" id="challenges" aria-labelledby="challenges-h">
           <h2 id="challenges-h"><span class="n">07</span> Challenges &amp; failures</h2>
-          <!-- TODO: what went wrong? A failed prototype is worth documenting. -->
           <div class="note note--failure">
             <span class="note__label">What didn't work</span>
-            <p style="margin:0">TODO — add your own description here.</p>
+            <p style="margin:0">The hardest part was getting it to drive straight. Without a gyro, it couldn't correct its own steering, and small differences between the two motors made it drift to one side. Getting the timing and distance right was tricky too, so I kept adjusting the code until it stopped near where I wanted.</p>
           </div>
         </section>
 
         <section class="proj-block" id="changed" aria-labelledby="changed-h">
           <h2 id="changed-h"><span class="n">08</span> What I changed after testing</h2>
-          <!-- TODO: what did you revise based on testing? -->
           <div class="note note--revision">
             <span class="note__label">Revision</span>
-            <p style="margin:0">Compared with v1, the body was reworked into a compact printed box that holds the electronics together. TODO — add your own description here.</p>
+            <p style="margin:0">The biggest change from v1 was the body. Instead of a loose frame, I designed a compact printed box that holds the board, battery, and motor in fixed spots. That made the vehicle smaller and stopped parts from shifting while it ran.</p>
           </div>
         </section>
 
         <section class="proj-block" id="result" aria-labelledby="result-h">
           <h2 id="result-h"><span class="n">09</span> Final result</h2>
-          <!-- TODO: how did the finished build turn out? -->
-          <p>TODO — add your own description here.</p>
+          <p>The finished v2 was smaller and much tidier than v1. Everything had its own place in the printed chassis, so it held together better and was easier to carry and work on.</p>
         </section>
 
         <section class="proj-block" id="next" aria-labelledby="next-h">
           <h2 id="next-h"><span class="n">10</span> What I'd improve next</h2>
-          <!-- TODO: what would the next version change? -->
-          <p>TODO — add your own description here.</p>
+          <p>I'd spend more time on the code and run more tests to find the best settings. With enough tuning, I think I could get it to drive straight and stop at the right distance more consistently.</p>
         </section>
 
         <section class="proj-block" id="video" aria-labelledby="video-h">
