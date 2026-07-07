@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Amir Pourmohammadi · Amir Tech Lab — Engineering & Builds</title>
+  <meta name="description" content="Amir Pourmohammadi (Amir Tech Lab) builds practical devices and prototypes — Arduino robots, electric vehicles, 3D-printed parts, and electronics projects, taken from sketchbook to working hardware." />
+
+  <!-- Open Graph / sharing (replace og-image.jpg with your own 1200x630 image) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Amir Pourmohammadi · Amir Tech Lab" />
+  <meta property="og:description" content="Practical devices and prototypes: Arduino robots, electric vehicles, and 3D-printed builds — documented from prototype to result." />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <!-- TODO: set this to your live URL once deployed, e.g. https://amir-techlab.netlify.app/ -->
+  <meta property="og:url" content="https://example.netlify.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (swap favicon.svg / add favicon.ico anytime) -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+
+  <!-- Fonts (load if online; the site falls back to system fonts offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Amir Pourmohammadi — Amir Tech Lab, home">
+        <span class="brand__name">Amir Pourmohammadi</span>
+        <span class="brand__tag">Amir Tech Lab</span>
+      </a>
+
+      <nav aria-label="Primary">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+          <span class="nav__toggle-bars" aria-hidden="true"></span>
+        </button>
+        <ul class="nav__links" id="navLinks">
+          <li><a class="nav__link" href="#top" data-nav>Home</a></li>
+          <li><a class="nav__link" href="#projects" data-nav>Projects</a></li>
+          <li><a class="nav__link" href="#about" data-nav>About</a></li>
+          <li><a class="nav__link" href="#skills" data-nav>Skills</a></li>
+          <li><a class="nav__link" href="#contact" data-nav>Contact</a></li>
+          <li><a class="btn btn--accent btn--small nav__cta" href="#contact">Get in touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero grid-paper" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__intro reveal">
+          <p class="eyebrow">Student engineer &amp; builder</p>
+          <h1 id="hero-title">I build practical devices and prototypes that <span class="accentword">solve real problems</span>.</h1>
+          <p>I create hardware and software projects that make everyday life a little better. From Arduino devices and custom 3D-printed parts to science experiments and product prototypes, I enjoy taking ideas from sketchbook to reality.</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--accent" href="#projects">View my projects
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#about">About me</a>
+          </div>
+
+          <p class="hero__specs" aria-label="What I work with">
+            <span>Electronics</span>
+            <span>Arduino &amp; code</span>
+            <span>3D printing</span>
+            <span>Biology</span>
+            <span>Product design</span>
+          </p>
+        </div>
+
+        <div class="hero__media reveal">
+          <!-- Decorative circuit-trace motif -->
+          <svg class="hero__circuit" viewBox="0 0 160 160" aria-hidden="true">
+            <path class="trace" d="M8 40 H60 V12 H120" />
+            <path class="trace" d="M8 96 H40 V140 H110 V108 H150" />
+            <line x1="120" y1="12" x2="150" y2="12" />
+            <circle cx="120" cy="12" r="4" />
+            <circle cx="40" cy="96" r="4" />
+            <circle cx="110" cy="140" r="4" />
+          </svg>
+
+          <figure class="hero__plate">
+            <img src="images/hero-workshop.jpg" width="1600" height="1200"
+                 alt="Orange 3D-printed two-wheel robot car with an Arduino Uno, breadboard, and bundled jumper wires, photographed on a black cutting mat." />
+            <figcaption class="hero__plate-tag">Electric Vehicle v2 · on the bench</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PROJECTS ============================ -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Selected builds</p>
+          <h2 id="projects-title">Projects</h2>
+          <p>Four hardware builds across two project lines — a maze-navigating robot and a small electric vehicle — each iterated through more than one version. Open any build to see the process, not just the finished photo.</p>
+        </div>
+
+        <div class="projects__grid">
+
+          <!-- ---- Robot Tour v2 ---- -->
+          <article class="card reveal">
+            <a class="card__media" href="projects/robot-tour-v2.html" aria-label="Open Robot Tour v2 project page">
+              <span class="card__badge">v2</span>
+              <span class="card__video-flag">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 3.5A1.5 1.5 0 013.5 2h6A1.5 1.5 0 0111 3.5v9A1.5 1.5 0 019.5 14h-6A1.5 1.5 0 012 12.5v-9z" stroke="currentColor" stroke-width="1.3"/><path d="M11 6l3-1.8v7.6L11 10" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+                Demo
+              </span>
+              <img src="images/robot-tour-v2-card.jpg" loading="lazy" width="900" height="563"
+                   alt="Orange 3D-printed robot car with an extended front guide arm and an Elegoo Arduino Uno." />
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">Robot Tour v2</h3>
+              <!-- TODO: replace with your own one-sentence problem statement -->
+              <p class="card__problem">Build on Robot Tour v1 by adding a front guide structure to reach and align with targets more reliably.</p>
+              <p class="card__desc">An Arduino-driven maze robot rebuilt with a wider 3D-printed front guide and reworked wiring. Demo clip included.</p>
+              <p class="card__specs">ARDUINO&nbsp;UNO · 2×DC&nbsp;GEAR&nbsp;MOTORS · FRONT&nbsp;GUIDE · 3D-PRINTED&nbsp;CHASSIS</p>
+              <div class="tags">
+                <span class="tag">Arduino</span><span class="tag">Robotics</span>
+                <span class="tag">Navigation</span><span class="tag">3D Printing</span>
+              </div>
+              <div class="card__foot">
+                <a class="btn btn--ghost btn--small" href="projects/robot-tour-v2.html">View project</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---- Electric Vehicle v2 ---- -->
+          <article class="card reveal">
+            <a class="card__media" href="projects/electric-vehicle-v2.html" aria-label="Open Electric Vehicle v2 project page">
+              <span class="card__badge">v2</span>
+              <img src="images/electric-vehicle-v2-card.jpg" loading="lazy" width="900" height="563"
+                   alt="Compact orange 3D-printed electric vehicle with a genuine Arduino Uno, breadboard, and yellow-hub wheels." />
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">Electric Vehicle v2</h3>
+              <!-- TODO: replace with your own one-sentence problem statement -->
+              <p class="card__problem">Make a smaller, tidier electric vehicle platform than v1 with a self-contained 3D-printed body.</p>
+              <p class="card__desc">A compact two-wheel-drive vehicle on a custom printed chassis, wired around an Arduino Uno and a breadboard.</p>
+              <p class="card__specs">ARDUINO&nbsp;UNO · 2×DC&nbsp;GEAR&nbsp;MOTORS · BREADBOARD · 3D-PRINTED&nbsp;BODY</p>
+              <div class="tags">
+                <span class="tag">Arduino</span><span class="tag">Electronics</span>
+                <span class="tag">Motor Control</span><span class="tag">3D Printing</span>
+              </div>
+              <div class="card__foot">
+                <a class="btn btn--ghost btn--small" href="projects/electric-vehicle-v2.html">View project</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---- Robot Tour v1 ---- -->
+          <article class="card reveal">
+            <a class="card__media" href="projects/robot-tour-v1.html" aria-label="Open Robot Tour v1 project page">
+              <span class="card__badge">v1</span>
+              <img src="images/robot-tour-v1-card.jpg" loading="lazy" width="900" height="563"
+                   alt="Black-chassis robot car with stacked round decks, a GY-521 motion sensor module, and a battery pack." />
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">Robot Tour v1</h3>
+              <!-- TODO: replace with your own one-sentence problem statement -->
+              <p class="card__problem">Create a first maze-navigating robot that can drive a planned route and turn accurately.</p>
+              <p class="card__desc">The original build on a stacked black chassis, using a GY-521 motion sensor for heading and turn control.</p>
+              <p class="card__specs">ARDUINO&nbsp;UNO · GY-521&nbsp;IMU · 2×DC&nbsp;GEAR&nbsp;MOTORS · STACKED&nbsp;CHASSIS</p>
+              <div class="tags">
+                <span class="tag">Arduino</span><span class="tag">Robotics</span>
+                <span class="tag">Sensors</span><span class="tag">Navigation</span>
+              </div>
+              <div class="card__foot">
+                <a class="btn btn--ghost btn--small" href="projects/robot-tour-v1.html">View project</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---- Electric Vehicle v1 ---- -->
+          <article class="card reveal">
+            <a class="card__media" href="projects/electric-vehicle-v1.html" aria-label="Open Electric Vehicle v1 project page">
+              <span class="card__badge">v1</span>
+              <span class="card__video-flag">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 3.5A1.5 1.5 0 013.5 2h6A1.5 1.5 0 0111 3.5v9A1.5 1.5 0 019.5 14h-6A1.5 1.5 0 012 12.5v-9z" stroke="currentColor" stroke-width="1.3"/><path d="M11 6l3-1.8v7.6L11 10" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+                Demo
+              </span>
+              <img src="images/electric-vehicle-v1-demo-poster.jpg" loading="lazy" width="900" height="900"
+                   alt="Video still of the first electric vehicle build driving on a desk." />
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">Electric Vehicle v1</h3>
+              <!-- TODO: replace with your own one-sentence problem statement -->
+              <p class="card__problem">Get a first driving electric vehicle working end-to-end, from motors to control.</p>
+              <p class="card__desc">The first running prototype, documented with a short demo clip. Photos to be added.</p>
+              <p class="card__specs">ARDUINO · DC&nbsp;GEAR&nbsp;MOTORS · DEMO&nbsp;VIDEO</p>
+              <div class="tags">
+                <span class="tag">Arduino</span><span class="tag">Electronics</span>
+                <span class="tag">Motor Control</span><span class="tag">Prototype</span>
+              </div>
+              <div class="card__foot">
+                <a class="btn btn--ghost btn--small" href="projects/electric-vehicle-v1.html">View project</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ ABOUT ============================ -->
+    <section class="section section--sunk" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="reveal">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">A maker who learns by building the next version</h2>
+          <p class="about__lead">I'm a student engineer and builder. I like problems I can hold in my hands — things that move, sense, or react — and I learn fastest by getting a rough version working, then improving it.</p>
+          <p>Most of what I make sits where electronics, code, and fabrication meet. I sketch an idea, wire up a prototype on a breadboard, print the parts I need, and keep revising until it behaves the way I pictured. The versions on this site (v1 → v2) are exactly that process in the open.</p>
+
+          <ul class="about__interests" aria-label="What I'm into">
+            <li data-n="01">Engineering and how mechanical and electronic parts work together</li>
+            <li data-n="02">Computer science and writing the code that controls hardware</li>
+            <li data-n="03">Biology and science experiments</li>
+            <li data-n="04">Arduino and electronics</li>
+            <li data-n="05">3D printing and fabrication</li>
+            <li data-n="06">Product design and how a build feels to use</li>
+            <li data-n="07">Experimentation and iterative improvement</li>
+          </ul>
+        </div>
+
+        <aside class="about__card reveal" aria-label="At a glance">
+          <h3>At a glance</h3>
+          <div class="about__stat"><span>Project lines</span><strong>2</strong></div>
+          <div class="about__stat"><span>Builds documented</span><strong>4</strong></div>
+          <div class="about__stat"><span>Versions iterated</span><strong>v1 → v2</strong></div>
+          <div class="about__stat"><span>Core toolkit</span><strong>Arduino · 3D print</strong></div>
+          <!-- TODO: edit these to whatever numbers you want to highlight -->
+          <p class="mt-2" style="margin-bottom:0;font-size:.92rem;color:var(--c-olive)">Watch build videos on <a href="https://www.youtube.com/@amirduino" target="_blank" rel="noopener">YouTube&nbsp;@amirduino</a>.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============================ SKILLS ============================ -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Toolkit</p>
+          <h2 id="skills-title">Skills</h2>
+          <p>The hands-on skills behind the builds. Edit any line in <code>index.html</code> to add, remove, or rename items as you learn new ones.</p>
+        </div>
+
+        <div class="skills__grid">
+          <div class="skill-group reveal">
+            <h3><span class="skill-group__n">01</span> Hardware &amp; electronics</h3>
+            <ul>
+              <li>Breadboard prototyping &amp; wiring</li>
+              <li>DC gear motors &amp; motor drivers</li>
+              <li>Sensors (e.g. GY-521 motion sensor)</li>
+              <li>Push buttons, power &amp; battery wiring</li>
+              <li>Reading and following pin diagrams</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3><span class="skill-group__n">02</span> Software &amp; programming</h3>
+            <ul>
+              <li>Arduino (C/C++) sketches</li>
+              <li>Reading sensor data &amp; driving motors</li>
+              <li>Debugging with the serial monitor</li>
+              <li>Simple control logic &amp; timing</li>
+              <!-- TODO: add other languages/tools you use -->
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3><span class="skill-group__n">03</span> CAD &amp; fabrication</h3>
+            <ul>
+              <li>3D modelling custom parts</li>
+              <li>3D printing chassis &amp; mounts</li>
+              <li>Designing for fit, tolerance &amp; assembly</li>
+              <li>Iterating printed parts between versions</li>
+              <!-- TODO: name your CAD software, e.g. Fusion 360 / Tinkercad / Onshape -->
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3><span class="skill-group__n">04</span> Science &amp; experimentation</h3>
+            <ul>
+              <li>Testing, measuring &amp; comparing results</li>
+              <li>Isolating problems methodically</li>
+              <li>Documenting builds and changes</li>
+              <li>Biology &amp; science experiments</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CONTACT ============================ -->
+    <section class="section section--sunk" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Get in touch</h2>
+          <p>Questions about a build, an idea to collaborate on, or just want to talk hardware? Send a message and I'll get back to you.</p>
+
+          <ul class="contact__links">
+            <li>
+              <a href="mailto:amirpourmohammadi.tech@gmail.com">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                amirpourmohammadi.tech@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/amirpourmohammaditech-ops/amir-portfolio" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.36-3.37-1.36-.46-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.36 9.36 0 015 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.59.69.49A10.02 10.02 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
+                github.com/amirpourmohammaditech-ops
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@amirduino" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5" stroke="currentColor" stroke-width="1.6"/><path d="M10 9.5l5 2.5-5 2.5v-5z" fill="currentColor"/></svg>
+                youtube.com/@amirduino
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="reveal">
+          <!--
+            Netlify contact form.
+            - data-netlify="true" lets Netlify auto-detect it on deploy.
+            - netlify-honeypot names the hidden anti-spam field ("bot-field").
+            - action="/thank-you.html" is the no-JS fallback success page.
+            - script.js enhances it with inline loading / success / error states.
+          -->
+          <form name="contact" method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                action="/thank-you.html"
+                class="form" id="contactForm" novalidate>
+            <!-- Required hidden input so Netlify maps the submission to this form -->
+            <input type="hidden" name="form-name" value="contact" />
+
+            <!-- Honeypot: real people never see or fill this -->
+            <p class="hp" aria-hidden="true">
+              <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+            </p>
+
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+            </div>
+
+            <div class="field">
+              <label for="subject">Subject or project topic</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button class="btn btn--accent" type="submit" id="submitBtn">Send message</button>
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <a class="brand footer__brand" href="index.html">
+          <span class="brand__name">Amir Pourmohammadi</span>
+          <span class="brand__tag">Amir Tech Lab</span>
+        </a>
+        <ul class="footer__links">
+          <li>
+            <a href="https://github.com/amirpourmohammaditech-ops/amir-portfolio" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.36-3.37-1.36-.46-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.36 9.36 0 015 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.59.69.49A10.02 10.02 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@amirduino" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5" stroke="currentColor" stroke-width="1.6"/><path d="M10 9.5l5 2.5-5 2.5v-5z" fill="currentColor"/></svg>
+              YouTube
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <span>Built through iteration · v1 → v2 → next.</span>
+        <span>© <span id="year">2026</span> Amir Pourmohammadi · Amir Tech Lab</span>
+        <a class="to-top" href="#top">Back to top
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M4 6.5L8 3l4 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

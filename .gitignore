@@ -1,0 +1,10 @@
+# Secrets (this site needs none — keep it that way)
+.env
+.env.local
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
