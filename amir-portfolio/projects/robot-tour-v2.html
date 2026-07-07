@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robot Tour v2 · Amir Tech Lab</title>
+  <meta name="description" content="Robot Tour v2 — an Arduino maze robot rebuilt with a 3D-printed front guide arm. Build process, testing, and a demo clip." />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Robot Tour v2 · Amir Tech Lab" />
+  <meta property="og:description" content="Robot Tour v2 — an Arduino maze robot rebuilt with a 3D-printed front guide arm. Build process, testing, and a demo clip." />
+  <meta property="og:image" content="../images/robot-tour-v2-final.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../favicon.ico" sizes="any" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Amir Pourmohammadi — Amir Tech Lab, home">
+        <span class="brand__name">Amir Pourmohammadi</span>
+        <span class="brand__tag">Amir Tech Lab</span>
+      </a>
+      <nav aria-label="Primary">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+          <span class="nav__toggle-bars" aria-hidden="true"></span>
+        </button>
+        <ul class="nav__links" id="navLinks">
+          <li><a class="nav__link" href="../index.html">Home</a></li>
+          <li><a class="nav__link" href="../index.html#projects">Projects</a></li>
+          <li><a class="nav__link" href="../index.html#about">About</a></li>
+          <li><a class="nav__link" href="../index.html#skills">Skills</a></li>
+          <li><a class="nav__link" href="../index.html#contact">Contact</a></li>
+          <li><a class="btn btn--accent btn--small nav__cta" href="../index.html#contact">Get in touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Project hero ===== -->
+    <section class="proj-hero grid-paper">
+      <div class="container">
+        <a class="back-link" href="../index.html#projects">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H4M7.5 4l-4 4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          All projects
+        </a>
+        <div class="proj-hero__meta">
+          <span class="card__badge" style="position:static">v2</span>
+          <div class="tags" style="margin:0"><span class="tag">Arduino</span><span class="tag">Robotics</span><span class="tag">Navigation</span><span class="tag">3D Printing</span></div>
+        </div>
+        <h1>Robot Tour v2</h1>
+        <p class="proj-hero__summary">A maze-navigating Arduino robot, rebuilt with a 3D-printed front guide and reworked wiring.</p>
+      </div>
+    </section>
+
+    <div class="container proj-layout">
+      <!-- ===== In-page contents ===== -->
+      <nav class="proj-toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#problem">The problem</a></li>
+          <li><a href="#why">Why I built it</a></li>
+          <li><a href="#tools">Tools &amp; materials</a></li>
+          <li><a href="#prototype">Prototype photos</a></li>
+          <li><a href="#cad">CAD &amp; diagrams</a></li>
+          <li><a href="#testing">Testing</a></li>
+          <li><a href="#challenges">Challenges</a></li>
+          <li><a href="#changed">What I changed</a></li>
+          <li><a href="#result">Final result</a></li>
+          <li><a href="#next">What I'd improve</a></li>
+          <li><a href="#video">Demo video</a></li>
+        </ol>
+      </nav>
+
+      <!-- ===== Content ===== -->
+      <div class="proj-content">
+
+        <figure class="hero__plate" style="margin:0 0 2.5rem">
+          <img src="../images/robot-tour-v2-final.jpg" alt="Orange 3D-printed robot car with a long front guide arm, an Elegoo Arduino Uno, breadboard, and a tangle of jumper wires on a cutting mat." />
+          <figcaption class="hero__plate-tag">Robot Tour v2 · final build</figcaption>
+        </figure>
+
+        <section class="proj-block" id="problem" aria-labelledby="problem-h">
+          <h2 id="problem-h"><span class="n">01</span> The problem</h2>
+          <!-- TODO: describe, in your own words, the original problem this build set out to solve. -->
+          <p>Robot Tour v1 could drive and turn, but reaching and lining up with a target was inconsistent. v2 set out to fix that with a dedicated front guide structure. TODO — add your own description here.</p>
+        </section>
+
+        <section class="proj-block" id="why" aria-labelledby="why-h">
+          <h2 id="why-h"><span class="n">02</span> Why I built it</h2>
+          <!-- TODO: why did you decide to build this? What sparked it? -->
+          <p>TODO — add your own description here.</p>
+        </section>
+
+        <section class="proj-block" id="tools" aria-labelledby="tools-h">
+          <h2 id="tools-h"><span class="n">03</span> Tools, materials &amp; software</h2>
+          <!-- TODO: confirm each row and fill any "TODO — add detail" values. -->
+          <table class="spec-table">
+            <tbody>
+              <tr><th>Microcontroller</th><td>Arduino Uno (Elegoo)</td></tr>
+              <tr><th>Drive</th><td>2× DC gear motors with yellow-hub wheels</td></tr>
+              <tr><th>Structure</th><td>3D-printed chassis with an extended front guide arm</td></tr>
+              <tr><th>Prototyping</th><td>Half-size breadboard + jumper wires</td></tr>
+              <tr><th>Input</th><td>Momentary push button (start/control)</td></tr>
+              <tr><th>Motor driver</th><td>TODO — add the driver board/IC you used</td></tr>
+              <tr><th>Power</th><td>TODO — add battery / power source</td></tr>
+              <tr><th>Software</th><td>Arduino sketch (C/C++) — TODO add libraries used</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="proj-block" id="prototype" aria-labelledby="prototype-h">
+          <h2 id="prototype-h"><span class="n">04</span> Prototype photos</h2>
+          <p>Different angles of the v2 build. Tap any photo to view it larger.</p>
+          <div class="gallery">
+            <figure>
+              <button class="shot" type="button" data-lightbox data-full="../images/robot-tour-v2-final.jpg" data-caption="Side view · front guide arm">
+                <img src="../images/robot-tour-v2-final.jpg" loading="lazy" alt="Side view of the orange robot with its front guide arm extended." />
+              </button>
+              <figcaption>Side view · front guide arm</figcaption>
+            </figure>
+            <figure>
+              <button class="shot" type="button" data-lightbox data-full="../images/robot-tour-v2-front.jpg" data-caption="Front view · printed guide">
+                <img src="../images/robot-tour-v2-front.jpg" loading="lazy" alt="Front-on view of the robot showing the U-shaped printed guide." />
+              </button>
+              <figcaption>Front view · printed guide</figcaption>
+            </figure>
+            <figure>
+              <button class="shot" type="button" data-lightbox data-full="../images/robot-tour-v2-top.jpg" data-caption="Top-down · wiring layout">
+                <img src="../images/robot-tour-v2-top.jpg" loading="lazy" alt="Top-down view of the wiring, breadboard, and Arduino." />
+              </button>
+              <figcaption>Top-down · wiring layout</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="proj-block" id="cad" aria-labelledby="cad-h">
+          <h2 id="cad-h"><span class="n">05</span> CAD &amp; diagrams</h2>
+          <!-- TODO: add CAD screenshots or wiring diagrams to images/ and place them here. -->
+          <div class="placeholder">
+            <span class="placeholder__title">CAD screenshot or wiring diagram</span>
+            <span>Save it as <code>images/robot-tour-v2-cad.jpg</code> and swap this block for an &lt;img&gt;.</span>
+          </div>
+        </section>
+
+        <section class="proj-block" id="testing" aria-labelledby="testing-h">
+          <h2 id="testing-h"><span class="n">06</span> Testing process</h2>
+          <!-- TODO: how did you test it? What did you measure or watch for? -->
+          <p>TODO — add your own description here.</p>
+        </section>
+
+        <section class="proj-block" id="challenges" aria-labelledby="challenges-h">
+          <h2 id="challenges-h"><span class="n">07</span> Challenges &amp; failures</h2>
+          <!-- TODO: what went wrong? A failed prototype is worth documenting. -->
+          <div class="note note--failure">
+            <span class="note__label">What didn't work</span>
+            <p style="margin:0">TODO — add your own description here.</p>
+          </div>
+        </section>
+
+        <section class="proj-block" id="changed" aria-labelledby="changed-h">
+          <h2 id="changed-h"><span class="n">08</span> What I changed after testing</h2>
+          <!-- TODO: what did you revise based on testing? -->
+          <div class="note note--revision">
+            <span class="note__label">Revision</span>
+            <p style="margin:0">The headline change from v1 was the printed front guide arm and a tidier wiring layout. TODO — add your own description here.</p>
+          </div>
+        </section>
+
+        <section class="proj-block" id="result" aria-labelledby="result-h">
+          <h2 id="result-h"><span class="n">09</span> Final result</h2>
+          <!-- TODO: how did the finished build turn out? -->
+          <p>TODO — add your own description here.</p>
+        </section>
+
+        <section class="proj-block" id="next" aria-labelledby="next-h">
+          <h2 id="next-h"><span class="n">10</span> What I'd improve next</h2>
+          <!-- TODO: what would the next version change? -->
+          <p>TODO — add your own description here.</p>
+        </section>
+
+        <section class="proj-block" id="video" aria-labelledby="video-h">
+          <h2 id="video-h"><span class="n">11</span> Demo video</h2>
+          <div class="video-block">
+            <video controls preload="metadata" poster="../images/robot-tour-v2-demo-poster.jpg"
+                   playsinline>
+              <source src="../videos/robot-tour-v2-demo.mp4" type="video/mp4" />
+              Your browser can't play embedded video.
+              <a href="../videos/robot-tour-v2-demo.mp4">Download the demo clip</a> instead.
+            </video>
+            <div class="video-block__cap">
+              <p>Short on-the-bench demo. Audio is muted by design.</p>
+              <a class="btn btn--ghost btn--small" href="https://www.youtube.com/@amirduino" target="_blank" rel="noopener">
+                Watch full build on YouTube
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 3h4M3 3v4M3 3l6 6M13 13H9M13 13V9M13 13L7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <p style="margin-top:2.5rem">
+          <a class="btn btn--ghost" href="../index.html#projects">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H4M7.5 4l-4 4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Back to all projects
+          </a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <a class="brand footer__brand" href="../index.html">
+          <span class="brand__name">Amir Pourmohammadi</span>
+          <span class="brand__tag">Amir Tech Lab</span>
+        </a>
+        <ul class="footer__links">
+          <li><a href="https://github.com/amirpourmohammaditech-ops/amir-portfolio" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.36-3.37-1.36-.46-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.36 9.36 0 015 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.59.69.49A10.02 10.02 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
+            GitHub</a></li>
+          <li><a href="https://www.youtube.com/@amirduino" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5" stroke="currentColor" stroke-width="1.6"/><path d="M10 9.5l5 2.5-5 2.5v-5z" fill="currentColor"/></svg>
+            YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <span>Built through iteration · v1 → v2 → next.</span>
+        <span>© <span id="year">2026</span> Amir Pourmohammadi · Amir Tech Lab</span>
+        <a class="to-top" href="#top">Back to top
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M4 6.5L8 3l4 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
