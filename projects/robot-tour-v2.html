@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Robot Tour v2 · Amir Tech Lab</title>
-  <meta name="description" content="Robot Tour v2 — an Arduino maze robot rebuilt with a 3D-printed front guide arm. Build process, testing, and a demo clip." />
+  <meta name="description" content="Robot Tour v2: an Arduino maze robot rebuilt with a 3D-printed front guide arm and a BNO055 orientation sensor. Build process, testing, and a demo clip." />
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Robot Tour v2 · Amir Tech Lab" />
-  <meta property="og:description" content="Robot Tour v2 — an Arduino maze robot rebuilt with a 3D-printed front guide arm. Build process, testing, and a demo clip." />
+  <meta property="og:description" content="Robot Tour v2: an Arduino maze robot rebuilt with a 3D-printed front guide arm and a BNO055 orientation sensor. Build process, testing, and a demo clip." />
   <meta property="og:image" content="../images/robot-tour-v2-final.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -90,29 +90,27 @@
 
         <section class="proj-block" id="problem" aria-labelledby="problem-h">
           <h2 id="problem-h"><span class="n">01</span> The problem</h2>
-          <!-- TODO: describe, in your own words, the original problem this build set out to solve. -->
-          <p>Robot Tour v1 could drive and turn, but reaching and lining up with a target was inconsistent. v2 set out to fix that with a dedicated front guide structure. TODO — add your own description here.</p>
+          <p>Robot Tour v1 could drive and turn, but reaching a target and lining up with it was inconsistent. Small errors in each turn added up over a run, so the robot often ended up off the mark. For v2 I wanted tighter control, so I added a 3D-printed front guide and a BNO055 orientation sensor to help it turn and aim more accurately.</p>
         </section>
 
         <section class="proj-block" id="why" aria-labelledby="why-h">
           <h2 id="why-h"><span class="n">02</span> Why I built it</h2>
-          <!-- TODO: why did you decide to build this? What sparked it? -->
-          <p>TODO — add your own description here.</p>
+          <p>Robot Tour is another Science Olympiad event, where the robot drives a course and tries to stop on a target point. After v1, I wanted a build that could hit the target more reliably. It was also my first time using an orientation sensor, so I could learn how to use its readings to control the robot's turns.</p>
         </section>
 
         <section class="proj-block" id="tools" aria-labelledby="tools-h">
           <h2 id="tools-h"><span class="n">03</span> Tools, materials &amp; software</h2>
-          <!-- TODO: confirm each row and fill any "TODO — add detail" values. -->
           <table class="spec-table">
             <tbody>
               <tr><th>Microcontroller</th><td>Arduino Uno (Elegoo)</td></tr>
-              <tr><th>Drive</th><td>2× DC gear motors with yellow-hub wheels</td></tr>
+              <tr><th>Drive</th><td>2× TT gear motors with built-in encoders and yellow-hub wheels</td></tr>
               <tr><th>Structure</th><td>3D-printed chassis with an extended front guide arm</td></tr>
               <tr><th>Prototyping</th><td>Half-size breadboard + jumper wires</td></tr>
               <tr><th>Input</th><td>Momentary push button (start/control)</td></tr>
-              <tr><th>Motor driver</th><td>TODO — add the driver board/IC you used</td></tr>
-              <tr><th>Power</th><td>TODO — add battery / power source</td></tr>
-              <tr><th>Software</th><td>Arduino sketch (C/C++) — TODO add libraries used</td></tr>
+              <tr><th>Orientation sensor</th><td>BNO055 9-axis IMU (heading/turns)</td></tr>
+              <tr><th>Motor driver</th><td>TB6612FNG dual motor driver</td></tr>
+              <tr><th>Power</th><td>8 AA batteries</td></tr>
+              <tr><th>Software</th><td>Arduino IDE (C++)</td></tr>
             </tbody>
           </table>
         </section>
@@ -144,47 +142,42 @@
 
         <section class="proj-block" id="cad" aria-labelledby="cad-h">
           <h2 id="cad-h"><span class="n">05</span> CAD &amp; diagrams</h2>
-          <!-- TODO: add CAD screenshots or wiring diagrams to images/ and place them here. -->
-          <div class="placeholder">
-            <span class="placeholder__title">CAD screenshot or wiring diagram</span>
-            <span>Save it as <code>images/robot-tour-v2-cad.jpg</code> and swap this block for an &lt;img&gt;.</span>
-          </div>
+          <p>I designed the chassis in CAD before printing it, then added a front guide arm to help the robot line up with the course.</p>
+          <figure class="hero__plate" style="margin:1.5rem 0 0">
+            <img src="../images/electric-vehicle-v2-cad.jpg" alt="CAD model of the printed chassis: a flat base with bracket walls and a curved cutout on one end." />
+            <figcaption class="hero__plate-tag">Chassis, designed in CAD</figcaption>
+          </figure>
         </section>
 
         <section class="proj-block" id="testing" aria-labelledby="testing-h">
           <h2 id="testing-h"><span class="n">06</span> Testing process</h2>
-          <!-- TODO: how did you test it? What did you measure or watch for? -->
-          <p>TODO — add your own description here.</p>
+          <p>Once the robot was built, I ran it through the course over and over to see how close it got to the target. After each run I adjusted the turns, the timing, and the sensor settings, then tried again to get it more consistent.</p>
         </section>
 
         <section class="proj-block" id="challenges" aria-labelledby="challenges-h">
           <h2 id="challenges-h"><span class="n">07</span> Challenges &amp; failures</h2>
-          <!-- TODO: what went wrong? A failed prototype is worth documenting. -->
           <div class="note note--failure">
             <span class="note__label">What didn't work</span>
-            <p style="margin:0">TODO — add your own description here.</p>
+            <p style="margin:0">The encoders built into the TT motors gave me the most trouble. They were supposed to track how far each wheel turned so the robot could measure distance, but I had a hard time getting reliable readings out of them. That made it harder to get the robot to travel an exact distance and stop where I wanted.</p>
           </div>
         </section>
 
         <section class="proj-block" id="changed" aria-labelledby="changed-h">
           <h2 id="changed-h"><span class="n">08</span> What I changed after testing</h2>
-          <!-- TODO: what did you revise based on testing? -->
           <div class="note note--revision">
             <span class="note__label">Revision</span>
-            <p style="margin:0">The headline change from v1 was the printed front guide arm and a tidier wiring layout. TODO — add your own description here.</p>
+            <p style="margin:0">The two big changes from v1 were the printed front guide arm and the BNO055 orientation sensor. v1 turned using timing alone, which drifted. With the sensor, the robot could check its real heading and correct itself, and the guide arm helped it line up with the course. I also cleaned up the wiring so it was easier to work with.</p>
           </div>
         </section>
 
         <section class="proj-block" id="result" aria-labelledby="result-h">
           <h2 id="result-h"><span class="n">09</span> Final result</h2>
-          <!-- TODO: how did the finished build turn out? -->
-          <p>TODO — add your own description here.</p>
+          <p>v2 was more accurate and more consistent than v1. With the orientation sensor helping it turn, the robot could follow the course and stop closer to the target more often.</p>
         </section>
 
         <section class="proj-block" id="next" aria-labelledby="next-h">
           <h2 id="next-h"><span class="n">10</span> What I'd improve next</h2>
-          <!-- TODO: what would the next version change? -->
-          <p>TODO — add your own description here.</p>
+          <p>I'd keep tuning how the robot uses the sensor so its turns are even more precise. Testing more course layouts would also help me find settings that hold up no matter where the target is.</p>
         </section>
 
         <section class="proj-block" id="video" aria-labelledby="video-h">
