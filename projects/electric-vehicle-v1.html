@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Electric Vehicle v1 · Amir Tech Lab</title>
-  <meta name="description" content="Electric Vehicle v1 — the first running Arduino electric vehicle prototype, documented with a short demo video." />
+  <meta name="description" content="Electric Vehicle v1: the first running Arduino electric vehicle prototype, documented with a short demo video." />
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Electric Vehicle v1 · Amir Tech Lab" />
-  <meta property="og:description" content="Electric Vehicle v1 — the first running Arduino electric vehicle prototype, documented with a short demo video." />
+  <meta property="og:description" content="Electric Vehicle v1: the first running Arduino electric vehicle prototype, documented with a short demo video." />
   <meta property="og:image" content="../images/electric-vehicle-v1-demo-poster.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -70,7 +70,6 @@
           <li><a href="#why">Why I built it</a></li>
           <li><a href="#tools">Tools &amp; materials</a></li>
           <li><a href="#prototype">Prototype photos</a></li>
-          <li><a href="#cad">CAD &amp; diagrams</a></li>
           <li><a href="#testing">Testing</a></li>
           <li><a href="#challenges">Challenges</a></li>
           <li><a href="#changed">What I changed</a></li>
@@ -90,25 +89,22 @@
 
         <section class="proj-block" id="problem" aria-labelledby="problem-h">
           <h2 id="problem-h"><span class="n">01</span> The problem</h2>
-          <!-- TODO: describe, in your own words, the original problem this build set out to solve. -->
           <p>For Science Olympiad, I was challenged to design and build a battery-powered vehicle capable of traveling a fixed distance of 8–10 meters within a target time of 10–20 seconds. The vehicle was limited to a maximum of eight AA batteries, requiring careful consideration of power, gearing, speed control, and consistency to achieve accurate performance.</p>
         </section>
 
         <section class="proj-block" id="why" aria-labelledby="why-h">
           <h2 id="why-h"><span class="n">02</span> Why I built it</h2>
-          <!-- TODO: why did you decide to build this? What sparked it? -->
           <p>I built this project as a fun challenge to test my engineering skills and see what I could create under a set of constraints. It gave me the chance to combine CAD, electronics, and programming while representing my school at the Science Olympiad regional competition.</p>
         </section>
 
         <section class="proj-block" id="tools" aria-labelledby="tools-h">
           <h2 id="tools-h"><span class="n">03</span> Tools, materials &amp; software</h2>
-          <!-- TODO: confirm each row and fill any "TODO — add detail" values. -->
           <table class="spec-table">
             <tbody>
               <tr><th>Microcontroller</th><td>Arduino Uno</td></tr>
               <tr><th>Drive</th><td>TT gear motors</td></tr>
               <tr><th>Structure</th><td>Basic rectangular frame with a bracket to hold the motor</td></tr>
-              <tr><th>Motor driver</th><td>TB6612FNG Dual DC Stepper Motor Driver</td></tr>
+              <tr><th>Motor driver</th><td>TB6612FNG dual motor driver</td></tr>
               <tr><th>Power</th><td>8 AA batteries</td></tr>
               <tr><th>Software</th><td>Arduino IDE with C++</td></tr>
             </tbody>
@@ -117,40 +113,32 @@
 
         <section class="proj-block" id="prototype" aria-labelledby="prototype-h">
           <h2 id="prototype-h"><span class="n">04</span> Prototype photos</h2>
-          <p>No still photos for this build yet — see the demo clip below. Add photos to <code>images/</code> when you have them.</p>
-          <div class="placeholder">
-            <span class="placeholder__title">Prototype photos go here</span>
-            <span>Drop images into <code>images/</code> and add them to this gallery.</span>
-          </div>
-        </section>
-
-        <section class="proj-block" id="cad" aria-labelledby="cad-h">
-          <h2 id="cad-h"><span class="n">05</span> CAD &amp; diagrams</h2>
-          <!-- TODO: add CAD screenshots or wiring diagrams to images/ and place them here. -->
-          <div class="placeholder">
-            <span class="placeholder__title">CAD screenshot or wiring diagram</span>
-            <span>Save it as <code>images/electric-vehicle-v1-cad.jpg</code> and swap this block for an &lt;img&gt;.</span>
+          <p>The first electric vehicle build. Tap the photo to view it larger.</p>
+          <div class="gallery">
+            <figure>
+              <button class="shot" type="button" data-lightbox data-full="../images/electric-vehicle-v1-build.jpg" data-caption="Electric Vehicle v1 · build">
+                <img src="../images/electric-vehicle-v1-build.jpg" loading="lazy" alt="The first electric vehicle prototype build." />
+              </button>
+              <figcaption>Electric Vehicle v1 · build</figcaption>
+            </figure>
           </div>
         </section>
 
         <section class="proj-block" id="testing" aria-labelledby="testing-h">
-          <h2 id="testing-h"><span class="n">06</span> Testing process</h2>
-          <!-- TODO: how did you test it? What did you measure or watch for? -->
+          <h2 id="testing-h"><span class="n">05</span> Testing process</h2>
           <p>Testing was a major part of the project. I spent several hours checking the wiring, running test drives, and measuring performance outdoors. Using a measuring tape and stopwatch, I compared the actual distance and travel time to my target values, then adjusted the code after each run to improve accuracy and consistency.</p>
         </section>
 
         <section class="proj-block" id="challenges" aria-labelledby="challenges-h">
-          <h2 id="challenges-h"><span class="n">07</span> Challenges &amp; failures</h2>
-          <!-- TODO: what went wrong? A failed prototype is worth documenting. -->
+          <h2 id="challenges-h"><span class="n">06</span> Challenges &amp; failures</h2>
           <div class="note note--failure">
             <span class="note__label">What didn't work</span>
-            <p style="margin:0">The biggest challenge was getting consistent performance. The inexpensive motors were sometimes unreliable, and as the batteries drained, the voltage dropped and changed the vehicle's speed. This made testing difficult and required a lot of trial and error to keep the distance and timing accurate.</p>
+            <p style="margin:0">The hardest part was getting the distance right. I set the run time in the code, so the timing was always accurate, but the distance the car covered in that time kept changing. The cheap motors were not always consistent, and as the batteries drained the speed dropped, so the same run time could travel a different distance.</p>
           </div>
         </section>
 
         <section class="proj-block" id="changed" aria-labelledby="changed-h">
-          <h2 id="changed-h"><span class="n">08</span> What I changed after testing</h2>
-          <!-- TODO: what did you revise based on testing? -->
+          <h2 id="changed-h"><span class="n">07</span> What I changed after testing</h2>
           <div class="note note--revision">
             <span class="note__label">Revision</span>
             <p style="margin:0">After each round of testing, I adjusted the code and fine-tuned the vehicle based on the results. These small changes helped improve consistency and made it easier to hit the target distance and timing more reliably.</p>
@@ -158,20 +146,17 @@
         </section>
 
         <section class="proj-block" id="result" aria-labelledby="result-h">
-          <h2 id="result-h"><span class="n">09</span> Final result</h2>
-          <!-- TODO: how did the finished build turn out? -->
+          <h2 id="result-h"><span class="n">08</span> Final result</h2>
           <p>The final vehicle performed well and was able to complete the challenge successfully. Although there are still areas that could be improved, the project achieved its main objectives and taught me a lot about testing, troubleshooting, and refining a design through multiple iterations.</p>
         </section>
 
         <section class="proj-block" id="next" aria-labelledby="next-h">
-          <h2 id="next-h"><span class="n">10</span> What I'd improve next</h2>
-          <!-- TODO: what would the next version change? -->
-          <p>This project led directly into a second version of the vehicle. Based on what I learned during testing, I upgraded the design to use higher-quality motors and hall effect encoders for more accurate distance tracking. These changes were aimed at improving consistency, reliability, and overall performance.
-</p>
+          <h2 id="next-h"><span class="n">09</span> What I'd improve next</h2>
+          <p>This project led directly into a second version of the vehicle. Based on what I learned during testing, I upgraded the design to use higher-quality motors and hall effect encoders for more accurate distance tracking. These changes were aimed at improving consistency, reliability, and overall performance.</p>
         </section>
 
         <section class="proj-block" id="video" aria-labelledby="video-h">
-          <h2 id="video-h"><span class="n">11</span> Demo video</h2>
+          <h2 id="video-h"><span class="n">10</span> Demo video</h2>
           <div class="video-block video-block--square">
             <video controls preload="metadata" poster="../images/electric-vehicle-v1-demo-poster.jpg"
                    playsinline>
