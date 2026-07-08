@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Robot Tour v1 · Amir Tech Lab</title>
-  <meta name="description" content="Robot Tour v1 — the first Arduino maze robot on a stacked chassis, using a GY-521 motion sensor for heading and turn control." />
+  <meta name="description" content="Robot Tour v1: the first Arduino maze robot on a stacked chassis, using a GY-521 (MPU-6050) motion sensor for heading and turn control." />
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Robot Tour v1 · Amir Tech Lab" />
-  <meta property="og:description" content="Robot Tour v1 — the first Arduino maze robot on a stacked chassis, using a GY-521 motion sensor for heading and turn control." />
+  <meta property="og:description" content="Robot Tour v1: the first Arduino maze robot on a stacked chassis, using a GY-521 (MPU-6050) motion sensor for heading and turn control." />
   <meta property="og:image" content="../images/robot-tour-v1-final.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -76,7 +76,6 @@
           <li><a href="#changed">What I changed</a></li>
           <li><a href="#result">Final result</a></li>
           <li><a href="#next">What I'd improve</a></li>
-          <li><a href="#video">Demo video</a></li>
         </ol>
       </nav>
 
@@ -90,28 +89,25 @@
 
         <section class="proj-block" id="problem" aria-labelledby="problem-h">
           <h2 id="problem-h"><span class="n">01</span> The problem</h2>
-          <!-- TODO: describe, in your own words, the original problem this build set out to solve. -->
-          <p>I wanted a robot that could drive a planned route through a maze and turn accurately enough to stay on track. TODO — add your own description here.</p>
+          <p>I wanted a robot that could drive a set route and turn accurately enough to stay on track and reach a target. This was my first maze-style robot, so the main goal was getting reliable driving and turning working at all.</p>
         </section>
 
         <section class="proj-block" id="why" aria-labelledby="why-h">
           <h2 id="why-h"><span class="n">02</span> Why I built it</h2>
-          <!-- TODO: why did you decide to build this? What sparked it? -->
-          <p>TODO — add your own description here.</p>
+          <p>Robot Tour is a Science Olympiad event where the robot follows a course and stops on a target. I built v1 to get a first working version going, and to learn how to use a gyro sensor to control how the robot moved and turned.</p>
         </section>
 
         <section class="proj-block" id="tools" aria-labelledby="tools-h">
           <h2 id="tools-h"><span class="n">03</span> Tools, materials &amp; software</h2>
-          <!-- TODO: confirm each row and fill any "TODO — add detail" values. -->
           <table class="spec-table">
             <tbody>
               <tr><th>Microcontroller</th><td>Arduino Uno</td></tr>
               <tr><th>Motion sensor</th><td>GY-521 (MPU-6050 accelerometer/gyroscope)</td></tr>
-              <tr><th>Drive</th><td>2× DC gear motors with yellow-hub wheels</td></tr>
-              <tr><th>Structure</th><td>Stacked round black chassis decks</td></tr>
+              <tr><th>Drive</th><td>2× basic TT gear motors with yellow-hub wheels (no encoders)</td></tr>
+              <tr><th>Structure</th><td>Round base plate and mounting bracket (designed in CAD)</td></tr>
               <tr><th>Power</th><td>Battery pack (separate enclosure)</td></tr>
-              <tr><th>Motor driver</th><td>TODO — add the driver board/IC you used</td></tr>
-              <tr><th>Software</th><td>Arduino sketch (C/C++) — TODO add libraries used</td></tr>
+              <tr><th>Motor driver</th><td>TB6612FNG dual motor driver</td></tr>
+              <tr><th>Software</th><td>Arduino IDE (C++)</td></tr>
             </tbody>
           </table>
         </section>
@@ -131,55 +127,52 @@
 
         <section class="proj-block" id="cad" aria-labelledby="cad-h">
           <h2 id="cad-h"><span class="n">05</span> CAD &amp; diagrams</h2>
-          <!-- TODO: add CAD screenshots or wiring diagrams to images/ and place them here. -->
-          <div class="placeholder">
-            <span class="placeholder__title">CAD screenshot or wiring diagram</span>
-            <span>Save it as <code>images/robot-tour-v1-cad.jpg</code> and swap this block for an &lt;img&gt;.</span>
+          <p>I designed the main parts of this robot in CAD before building it: a round base plate that the electronics and motors mount onto, and a smaller bracket. Here are the CAD models for both.</p>
+          <div class="gallery">
+            <figure>
+              <button class="shot" type="button" data-lightbox data-full="../images/robot-tour-v1-base-cad.jpg" data-caption="Main base plate · CAD">
+                <img src="../images/robot-tour-v1-base-cad.jpg" loading="lazy" alt="CAD model of a round base plate with mounting holes and a rectangular channel along one straight edge." />
+              </button>
+              <figcaption>Main base plate · CAD</figcaption>
+            </figure>
+            <figure>
+              <button class="shot" type="button" data-lightbox data-full="../images/robot-tour-v1-bracket-cad.jpg" data-caption="Mounting bracket · CAD">
+                <img src="../images/robot-tour-v1-bracket-cad.jpg" loading="lazy" alt="CAD model of a small box-shaped bracket with internal triangular supports and a central hole." />
+              </button>
+              <figcaption>Mounting bracket · CAD</figcaption>
+            </figure>
           </div>
         </section>
 
         <section class="proj-block" id="testing" aria-labelledby="testing-h">
           <h2 id="testing-h"><span class="n">06</span> Testing process</h2>
-          <!-- TODO: how did you test it? What did you measure or watch for? -->
-          <p>TODO — add your own description here.</p>
+          <p>I tested v1 by running it along a route and watching how well it drove straight and made its turns. I used a stopwatch and measured the distance it covered, then adjusted the timing in the code and tried again to get it closer.</p>
         </section>
 
         <section class="proj-block" id="challenges" aria-labelledby="challenges-h">
           <h2 id="challenges-h"><span class="n">07</span> Challenges &amp; failures</h2>
-          <!-- TODO: what went wrong? A failed prototype is worth documenting. -->
           <div class="note note--failure">
             <span class="note__label">What didn't work</span>
-            <p style="margin:0">TODO — add your own description here.</p>
+            <p style="margin:0">I couldn't get the turns right on this build. The GY-521 gyro was hard to use, and I couldn't get it to turn the robot by a reliable amount. Distance was a problem too. With no encoders on the motors, I had to rely on timing to guess how far the robot had gone, and that was never very consistent.</p>
           </div>
         </section>
 
         <section class="proj-block" id="changed" aria-labelledby="changed-h">
           <h2 id="changed-h"><span class="n">08</span> What I changed after testing</h2>
-          <!-- TODO: what did you revise based on testing? -->
           <div class="note note--revision">
             <span class="note__label">Revision</span>
-            <p style="margin:0">Lessons from v1 — especially around reaching and aligning with targets — fed directly into the Robot Tour v2 redesign. TODO — add your own description here.</p>
+            <p style="margin:0">I did not change much on v1 itself. It was my first version, so most of what I learned turned into a plan for the next build rather than fixes to this one. The main takeaway was that a basic gyro and timing were not enough for accurate movement.</p>
           </div>
         </section>
 
         <section class="proj-block" id="result" aria-labelledby="result-h">
           <h2 id="result-h"><span class="n">09</span> Final result</h2>
-          <!-- TODO: how did the finished build turn out? -->
-          <p>TODO — add your own description here.</p>
+          <p>v1 worked as a first version. It could drive and turn using the gyro, but it was not accurate or consistent enough to reliably hit a target. It did its job as a starting point and showed me exactly what to fix next.</p>
         </section>
 
         <section class="proj-block" id="next" aria-labelledby="next-h">
           <h2 id="next-h"><span class="n">10</span> What I'd improve next</h2>
-          <!-- TODO: what would the next version change? -->
-          <p>v1 led to v2's printed front guide and tidier wiring. TODO — add your own description here.</p>
-        </section>
-
-        <section class="proj-block" id="video" aria-labelledby="video-h">
-          <h2 id="video-h"><span class="n">11</span> Demo video</h2>
-          <div class="video-block">
-            <p class="video-empty">No demo clip for this build yet. Add one as
-              <code>videos/&lt;name&gt;-demo.mp4</code> and a poster image, then drop in a &lt;video&gt; here.</p>
-          </div>
+          <p>For the next version I wanted better turning and better distance control. That became v2, where I moved to a stronger orientation sensor, added motors with built-in encoders, and designed a printed chassis with a front guide arm.</p>
         </section>
 
         <p style="margin-top:2.5rem">
