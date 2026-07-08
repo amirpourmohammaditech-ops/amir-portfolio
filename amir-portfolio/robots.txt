@@ -1,7 +1,0 @@
-# Amir Pourmohammadi · Amir Tech Lab
-User-agent: *
-Allow: /
-Disallow: /thank-you.html
-
-# TODO: replace example.netlify.app with your real domain once deployed
-Sitemap: https://example.netlify.app/sitemap.xml
